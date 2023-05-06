@@ -1,12 +1,19 @@
 import React from "react";
+import "../css/pokeview.css";
 
-const Pokeview = ({ pokemon }) => {
+const Pokeview = ({ pokemon, onClick }) => {
   return (
-    <div className="container">
-      <img src={pokemon.image} alt={pokemon.name} />
-      <h2 className="name">{pokemon.name}</h2>
-      <p className="id">{pokemon.id}</p>
-      <p className="type">{pokemon.type}</p>
+    <div className="container-view" onClick={onClick}>
+      <div className="image-container-view">
+        <img src={pokemon.pokemonImage} alt={pokemon.pokemonName} />
+      </div>
+      <div className="info-container-view">
+        <h2 className="name">{pokemon.pokemonName}</h2>
+        <p className="type">{pokemon.pokemonType}</p>
+      </div>
+      <div className="id-container-view">
+        <p className="id">{pokemon.pokemonId}</p>
+      </div>
     </div>
   );
 };

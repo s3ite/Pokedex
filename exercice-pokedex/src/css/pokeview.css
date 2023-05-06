@@ -1,0 +1,23 @@
+.container-view {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-color: black;
+  margin: 1%;
+}
+
+.image-container-view {
+  flex: 0 0 auto;
+  margin-right: 1rem;
+}
+
+.info-container-view {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.id-container-view {
+  flex: 0 0 auto;
+  margin-left: 1rem;
+}
+

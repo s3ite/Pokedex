@@ -1,4 +1,4 @@
-const MAX_POKEMON = 20;
+const MAX_POKEMON = 21;
 
 export const pokemonData = async () => {
   const result = [];
@@ -9,7 +9,6 @@ export const pokemonData = async () => {
       const pokemon = await response.json();
 
 
-      console.log(pokemon.sprites);
       let pokemonImage = pokemon["sprites"]["front_default"];
 
       const pokemonAbilities = pokemon.abilities
@@ -33,18 +32,9 @@ export const pokemonData = async () => {
         }
       }
 
-      result.push({
-        pokemonType,
-        pokemonId,
-        pokemonHeight,
-        pokemonWeight,
-        pokemonImage,
-        pokemonAbilities,
-        pokemonName,
-        pokemonDesc,
-      });
+      result.push({pokemonType, pokemonId, pokemonHeight, pokemonWeight, pokemonImage, pokemonAbilities, pokemonName, pokemonDesc}); 
     } catch (error) {
-      console.error(error);
+      console.log(error);
     }
   }
 
